@@ -1,12 +1,14 @@
-// pop remove last vale from array
+// pop remove/returns last vale from array
 
 var array = [0,1,2,3,4,5];
 
-var pop = function(array){
+var pop = module.exports = exports = function(array){
+  var x = array.length;
   var newArray = array;
-  var x = array.length - 1;
-  newArray.length = x;
-  console.log(newArray);
+  var lastValue = array[x-1];
+  newArray.length = array.length - 1;
+  // console.log(lastValue);
+  // console.log(newArray);
 };
 
 pop(array);
