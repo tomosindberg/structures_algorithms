@@ -1,12 +1,11 @@
 // push add values to end of array
+//returns array.length
 
 var array = [1,2,3,4,5,6];
 
-
-var push = module.exports = exports =function(array, value){
-
-    array[array.length] = value;
-    return array;
+Array.prototype.myPush = function(value) {
+  this[this.length] = value;
+  return this.length;
 };
 
-push(array, 7);
+// console.log(array.myPush(10));
