@@ -2,17 +2,12 @@
 //and returns new array
 var array = [0,1,2,3,4];
 
-var unshift = module.exports = exports = function(array, value){
+Array.prototype.myUnshift = function(value){
   var newArray = [];
   newArray[0] = value;
-  var j = 0;
-  for(i=1; i<array.length + 1; i++){
-    newArray[i] = array[j];
-    j++;
+  for(var i = this.length; i > 0; i--){
+    newArray[i]=this[i-1];
   }
-  // console.log(newArray);
-  return(newArray);
+  return newArray;
 };
-
-unshift(array, 5);
 
